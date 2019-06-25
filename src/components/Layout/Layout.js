@@ -11,6 +11,7 @@ type Props = {
 };
 
 const Layout = ({ children, title, description }: Props) => (
+  <div className={styles.container}>
   <div className={styles.layout}>
     <Helmet>
       <html lang="en" />
@@ -21,7 +22,7 @@ const Layout = ({ children, title, description }: Props) => (
       <meta name="twitter:title" content={title} />
     </Helmet>
     {children}
-  </div>
+  </div></div>
 );
 
 export default Layout;
