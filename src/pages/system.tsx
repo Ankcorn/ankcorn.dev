@@ -7,7 +7,7 @@ const app = new Hono();
 app.get("/", (c) => {
   const sysInfo = getSystemInfo();
   return c.html(
-    <Layout>
+    <Layout showFooter>
       <article class="prose dark:prose-invert max-w-none">
         <h1>System</h1>
         <ul>

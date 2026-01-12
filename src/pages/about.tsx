@@ -5,7 +5,7 @@ const app = new Hono();
 
 app.get("/", (c) => {
   return c.html(
-    <Layout>
+    <Layout showFooter>
       <article class="prose dark:prose-invert max-w-none">
         <img src="/static/me.jpg" alt="Thomas Ankcorn" class="float-right ml-4 mb-4 w-48 rounded-lg grayscale" />
         <p>

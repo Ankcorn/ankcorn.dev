@@ -1,6 +1,6 @@
-import type { FC } from 'hono/jsx'
+import type { Child, FC } from 'hono/jsx'
 
-export const Layout: FC = (props) => {
+export const Layout: FC<{ showFooter?: boolean; children: Child }> = (props) => {
   return (
     <html>
       <head>
@@ -9,8 +9,8 @@ export const Layout: FC = (props) => {
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="/static/styles.css" />
       </head>
-      <body class="font-mono dark:text-gray-100 dark:bg-neutral-900 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-h-screen">
-        <div class="mx-auto max-w-3xl mt-8">
+      <body class="font-mono dark:text-gray-100 dark:bg-neutral-900 min-h-screen flex flex-col">
+        <div class="mx-auto max-w-3xl w-full px-4 sm:px-6 lg:px-8 mt-8 flex-1">
           <header class="mb-8">
             <nav class="flex items-center justify-between">
               <a href="/" class="text-xl font-bold">Thomas Ankcorn</a>
@@ -23,6 +23,19 @@ export const Layout: FC = (props) => {
           </header>
           {props.children}
         </div>
+        {props.showFooter && (
+          <footer class="mt-16 py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-200 dark:border-gray-800 text-sm text-gray-500 dark:text-gray-400 flex items-center justify-between">
+            <p>&copy; {new Date().getFullYear()} Thomas Ankcorn</p>
+            <div class="flex gap-4">
+              <a href="https://x.com/thomas_ankcorn" target="_blank" rel="noopener noreferrer" class="hover:text-gray-700 dark:hover:text-gray-200">
+                X
+              </a>
+              <a href="https://www.linkedin.com/in/thomas-ankcorn-370889151/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-700 dark:hover:text-gray-200">
+                LinkedIn
+              </a>
+            </div>
+          </footer>
+        )}
       </body>
     </html>
   )
