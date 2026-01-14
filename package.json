@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"tsx watch src/index.tsx\" \"tailwindcss -i src/styles.css -o static/styles.css --watch\"",
+    "dev": "concurrently \"bun run src/index.tsx --watch\" \"tailwindcss -i src/styles.css -o static/styles.css --watch\"",
     "build": "tailwindcss -i src/styles.css -o static/styles.css --minify",
-    "start": "tsx src/index.tsx"
+    "start": "bun run src/index.tsx"
   },
   "keywords": [],
   "author": "",

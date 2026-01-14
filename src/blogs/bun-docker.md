@@ -1,7 +1,7 @@
 ---
 title: "Vertical Integration Wins"
 date: 2025-01-12
-slug: bun-docker
+slug: virtical-integration
 ---
 
 # Vertical Integration Wins

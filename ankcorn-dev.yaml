@@ -1,0 +1,80 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ankcorn-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ankcorn-dev
+  template:
+    metadata:
+      labels:
+        app: ankcorn-dev
+    spec:
+      imagePullSecrets:
+        - name: ghcr-secret
+      containers:
+        - name: ankcorn-dev
+          image: ghcr.io/ankcorn/ankcorn.dev:sha-dbdf853
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ankcorn-dev
+spec:
+  type: ClusterIP
+  selector:
+    app: ankcorn-dev
+  ports:
+    - port: 3000
+      targetPort: 3000
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ankcorn-dev
+spec:
+  rules:
+    - host: berry.lan
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ankcorn-dev
+                port:
+                  number: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudflared
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudflared
+  template:
+    metadata:
+      labels:
+        app: cloudflared
+    spec:
+      containers:
+        - name: cloudflared
+          image: cloudflare/cloudflared:latest
+          args:
+            - tunnel
+            - --no-autoupdate
+            - run
+            - --token
+            - $(TUNNEL_TOKEN)
+          env:
+            - name: TUNNEL_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: cloudflared-token
+                  key: token
