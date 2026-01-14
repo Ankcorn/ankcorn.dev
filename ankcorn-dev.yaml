@@ -12,11 +12,9 @@ spec:
       labels:
         app: ankcorn-dev
     spec:
-      imagePullSecrets:
-        - name: ghcr-secret
       containers:
         - name: ankcorn-dev
-          image: ghcr.io/ankcorn/ankcorn.dev:sha-dbdf853
+          image: ghcr.io/ankcorn/ankcorn.dev:sha-30d4ec5
           ports:
             - containerPort: 3000
 ---

@@ -14,7 +14,7 @@ So naturally, I decided to do the opposite.
 
 I wanted to run my personal website at home, on my own hardware, in the UK. Not “in the cloud, but the region is London”. Like… actually in my house.
 
-The temptation to do `wrangler deploy` and be done is enormous (Cloudflare is literally my employer and it is quite marvelous). But my friend Sean M Tracey gave me a Raspberry Pi, and that was enough to ruin my financial judgement.
+The temptation to do `wrangler deploy` and be done is enormous (Cloudflare is literally my employer and it is quite marvelous). But my friend [Sean Trace](https://smt.codes) gave me a Raspberry Pi, and that was enough to ruin my financial judgement.
 
 This post is a guide for my friends who also want to do something deeply impractical: deploy their website to a Pi.
 
