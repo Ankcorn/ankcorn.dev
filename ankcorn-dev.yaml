@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: ankcorn-dev
-          image: ghcr.io/ankcorn/ankcorn.dev:sha-30d4ec5
+          image: ghcr.io/ankcorn/ankcorn.dev:sha-95c1c08
           ports:
             - containerPort: 3000
 ---
