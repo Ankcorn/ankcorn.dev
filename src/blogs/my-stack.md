@@ -10,7 +10,7 @@ If you’ve ever worked with me, you know I’m extremely serverless pilled.
 
 If you ask me what the right tool for the job is, 99 times out of 100 I’ll say: use the platform and spend your innovation tokens wisely.
 
-So naturally, I decided to do the opposite.
+But today, I decided to do the opposite.
 
 I wanted to run my personal website at home, on my own hardware, in the UK. Not “in the cloud, but the region is London”. Like… actually in my house.
 
