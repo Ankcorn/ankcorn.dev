@@ -11,7 +11,7 @@ app.get("/:slug", (c) => {
   if (!post) {
     return c.html(
       <Layout showFooter>
-        <article class="prose dark:prose-invert max-w-none">
+        <article class="prose prose-lg sm:prose-base dark:prose-invert max-w-none">
           <h1>Post not found</h1>
           <p>
             <a href="/">Go back home</a>
@@ -24,7 +24,7 @@ app.get("/:slug", (c) => {
 
   return c.html(
     <Layout showFooter>
-      <article class="prose dark:prose-invert max-w-none">
+      <article class="prose prose-lg sm:prose-base dark:prose-invert max-w-none">
         <time class="text-sm text-gray-500 dark:text-gray-400">
           {post.date.toLocaleDateString("en-US", {
             year: "numeric",

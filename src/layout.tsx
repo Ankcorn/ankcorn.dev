@@ -9,7 +9,7 @@ export const Layout: FC<{ showFooter?: boolean; children: Child }> = (props) => 
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="/static/styles.css" />
       </head>
-      <body class="font-mono dark:text-gray-100 dark:bg-neutral-900 min-h-screen flex flex-col">
+      <body class="font-mono text-base dark:text-gray-100 dark:bg-neutral-900 min-h-screen flex flex-col">
         <div class="mx-auto max-w-3xl w-full px-4 sm:px-6 lg:px-8 mt-8 flex-1">
           <header class="mb-8">
             <nav class="flex items-center justify-between">

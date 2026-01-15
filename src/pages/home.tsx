@@ -9,7 +9,7 @@ app.get("/", (c) => {
 
   return c.html(
     <Layout>
-      <article class="prose dark:prose-invert max-w-none">
+      <article class="prose prose-lg sm:prose-base dark:prose-invert max-w-none">
         <p>
           I'm an Engineer on the Workers Observability Team at{" "}
           <a href="https://x.com/CloudflareDev" target="_blank" rel="noopener noreferrer">Cloudflare</a>.

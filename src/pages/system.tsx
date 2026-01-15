@@ -8,7 +8,7 @@ app.get("/", (c) => {
   const sysInfo = getSystemInfo();
   return c.html(
     <Layout showFooter>
-      <article class="prose dark:prose-invert max-w-none">
+      <article class="prose prose-lg sm:prose-base dark:prose-invert max-w-none">
         <h1>System</h1>
         <ul>
           <li>Hostname: {sysInfo.hostname}</li>
