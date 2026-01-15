@@ -1230,6 +1230,14 @@
     }
   }
 }
+.prose {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.prose pre {
+  overflow-x: auto;
+  word-break: normal;
+}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
