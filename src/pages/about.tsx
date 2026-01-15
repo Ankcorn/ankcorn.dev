@@ -11,7 +11,7 @@ app.get("/", (c) => {
         <p>
           I studied <a href="https://en.wikipedia.org/wiki/Control_engineering" target="_blank" rel="noopener noreferrer">Automatic Control and Systems Engineering</a> at the University
           of Sheffield where I drank too much Hobgoblin, danced to the Arctic
-          Monkeys, met the amazing partner, built anomaly detection using <a href="https://en.wikipedia.org/wiki/Robust_principal_component_analysis" target="_blank" rel="noopener noreferrer">Robust
+          Monkeys, built anomaly detection using <a href="https://en.wikipedia.org/wiki/Robust_principal_component_analysis" target="_blank" rel="noopener noreferrer">Robust
           PCA</a>, learnt far too much about smart washing machines and <a href="https://en.wikipedia.org/wiki/Fuzzy_logic" target="_blank" rel="noopener noreferrer">fuzzy logic</a>,
           and occasionally picked up some programming.
         </p>
