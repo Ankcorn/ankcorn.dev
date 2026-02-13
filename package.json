@@ -1,11 +1,12 @@
 {
   "name": "ankcorn.dev",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"bun run src/index.tsx --watch\" \"tailwindcss -i src/styles.css -o static/styles.css --watch\"",
-    "build": "tailwindcss -i src/styles.css -o static/styles.css --minify",
+    "dev": "bun --watch src/index.tsx & bunx tailwindcss -i src/styles.css -o static/styles.css --watch",
+    "build": "bunx tailwindcss -i src/styles.css -o static/styles.css --minify",
     "start": "bun run src/index.tsx"
   },
   "keywords": [],
